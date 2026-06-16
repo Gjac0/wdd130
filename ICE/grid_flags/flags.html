@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            display: grid;
+            grid-template-columns: .1fr .1fr 1fr .1fr;
+            margin-top: 20px;
+        }
+        hr {
+            width: 100%;
+            grid-column: 1 / 5;
+        }
+        h2 {
+            grid-column: 2/3;
+        }
+
+        #blue {
+            background: blue;
+            grid-column: 1 / 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #white {
+            background: white;
+            grid-column: 2 / 4;
+        }
+
+        #red {
+            background: red;
+            grid-column: 1 / 4;
+        }
+
+        #chile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        .star {
+            width: 70px;
+            aspect-ratio: 1;
+            background: white;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+
+        #denmark{
+            display: grid;
+            grid-template-columns: 32.432% 10.811% 56.757%; /*12 4 21*/
+            grid-template-rows: 42.8571% 14.285% 42.8571%; /*12 4 12*/
+            height: 200px;/*28:37*/
+            width: 300px;
+        }
+        .dred{
+            background: #C9082A;
+        }
+        .white{
+            background: #fff;
+        }
+
+        #finland{
+            background: #0042A0;
+            display: grid;
+            grid-template-columns:1fr 2fr; 
+            grid-template-rows: 1fr 1fr;
+            gap: 33.33px; 
+            height: 200px;
+            width: 300px;
+        }
+        
+        .fwhite{
+            background: #fff;
+        }
+
+        #benin{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px
+        }
+
+        .bgreen{background: #008850;}
+        .byellow{background: #FCD20E;}
+        .bred{background: #E90829;}
+
+        #italy{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+        #igreen{background: #009344;}
+        #iwhite{background: #fff;}
+        #ired{background: #CF2734;}
+        #car{
+            display: grid;
+            background: #d21034;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 50px;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+        .cblue{
+            display: flex;
+    
+            justify-content: center;
+            background: #003082;
+        }
+        .cwhite{background: #FFFFFF;}
+        .cgreen{background: #289728;}
+        .cyellow{background: #ffce00;}
+        #cstar {
+            justify-self: center;
+            width: 48px;
+            height: 48px;
+            aspect-ratio: 1;
+            margin-right: 20px;
+            background: #ffce00;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using CSS Grid to make Country Flags</h1>
+    </header>
+    <main>
+        <h2>Chile</h2>
+        <div id="chile">
+            <div id="blue">
+                <div class="star"></div>
+            </div>
+            <div id="white"></div>
+            <div id="red"></div>
+        </div>
+        <hr>
+
+        <h2>Denmark</h2>
+        <div id="denmark">
+            <div class="dred"></div>
+            <div class="white"></div>
+            <div class="dred"></div>
+
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+
+            <div class="dred"></div>
+            <div class="white"></div>
+            <div class="dred"></div>
+        </div>
+        <hr>
+
+        <h2>Finland</h2>
+        <div id="finland">
+            <div class="fwhite"></div>
+            <div class="fwhite"></div>
+            <div class="fwhite"></div>
+            <div class="fwhite"></div>
+        </div>
+        <hr>
+
+        <h2>Benin</h2>
+        <div id="benin">
+            <div class="bgreen"></div>
+            <div class="byellow"></div>
+            <div class="bgreen"></div>
+            <div class="bred"></div>
+        </div>
+
+        <hr>
+        <h2>Italy</h2>
+        <div id="italy">
+            <div id="igreen"></div>
+            <div id="iwhite"></div>
+            <div id="ired"></div>
+        </div>
+        <hr>
+        
+        <h2>C.A.R.</h2>
+        <div id="car">
+            <div class="cblue">
+                <div id="cstar"></div>
+            </div>
+            <div class="cblue"></div>
+            
+            <div class="cwhite"></div>
+            <div class="cwhite"></div>
+
+            <div class="cgreen"></div>
+            <div class="cgreen"></div>
+
+            <div class="cyellow"></div>
+            <div class="cyellow"></div>
+        </div>
+        <hr>
+    </main>
+</body>
+
+</html>

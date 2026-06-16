@@ -1,0 +1,13 @@
+body {
+    display: grid;
+}
+
+header{
+    display: flex;
+    margin: 10px;
+}
+
+header img{
+    height: 50px;
+    width: 50px;
+}
